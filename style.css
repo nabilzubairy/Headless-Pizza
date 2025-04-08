@@ -1,0 +1,338 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background: rgb(238, 238, 238);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(40, 44, 63, 0.15) 0px 15px 40px -20px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+    padding: 2rem;
+    background: rgb(250, 250, 250);
+}
+
+.logo{
+    width: 25rem;
+
+}
+
+.logo img{
+    width: 100%;
+}
+
+.search{
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    background: rgb(238, 238, 238);
+    border: 2px solid rgb(204, 204, 204);
+    /* border-image: initial; */
+}
+
+.header_search-input {
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 40rem;
+    font-family: inherit;
+    padding: 1rem 2rem;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    background: inherit;
+}
+
+.header_search-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+}
+
+.header_search-submit i{
+    font-size: 2.5rem;
+    color: rgb(153, 153, 153);
+}
+
+.container{
+    max-width: 110rem;
+    width: 90%;
+    margin: auto;
+}
+.main-content{
+    padding: 16rem 0;
+}
+
+.main-content__upper{
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.main-content__upper-title {
+    font-size: 2rem;
+    color: rgb(119, 119, 119);
+    align-self: flex-end;
+}
+
+.main-content__upper-title span {
+    color: rgb(51, 51, 51);
+    font-weight: 800;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.item, .item-skeleton {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background: rgb(250, 250, 250);
+    padding: 1rem;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: #0000001a 0 1px 10px;
+}
+
+.item__img-cont {
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.item__img-cont img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.item__name {
+    font-size: 1.8rem;
+    color: #555;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.item__highlights {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item__rating {
+    display: flex;
+    align-items: center;
+}
+
+.item__rating div {
+    font-weight: 800;
+    color: #888;
+    font-size: 1.4rem;
+}
+
+.item__rating-icon-cont {
+    background: #0da729;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    padding: 3px 3px 3px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.item__rating i {
+    color: #fafafa;
+    font-size: 1.3rem;
+}
+
+.item__price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #555;
+    background: #eee;
+    padding: .5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+
+/* for footer */
+.footer {
+    background: rgb(17, 17, 17);
+}
+.footer__container {
+    max-width: 110rem;
+    width: 90%;
+    margin: auto;
+}
+.footer__upper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    padding: 10rem 0px;
+}
+
+.footer__logo-cont {
+    width: 16rem;
+    margin-bottom: 2rem;
+}
+.footer__logo-cont img {
+    width: 100%;
+}
+.footer__text {
+    color: rgb(204, 204, 204);
+    font-size: 1.3rem;
+    max-width: 40rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+.footer__socials {
+    display: flex;
+    align-items: center;
+}
+.footer__socials i {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    color: rgb(204, 204, 204);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer__newsletter {
+    max-width: 50rem;
+}
+.footer__newsletter-title {
+    font-size: 3rem;
+    color: rgb(238, 238, 238);
+    margin-bottom: 2rem;
+}
+
+.footer__newsletter-form {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+.footer__newsletter-form input {
+    flex-grow: 1;
+    display: block;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgb(238, 238, 238);
+    font-family: inherit;
+    width: 0px;
+    padding: 1.2rem;
+    border-radius: 5px;
+    background: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
+}
+.footer__newsletter-form button {
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0px 2rem;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 5px;
+    background: rgb(252, 128, 25);
+    transition: 0.3s;
+}
+.footer__newsletter p {
+    color: rgb(204, 204, 204);
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+
+
+
+.footer__lower {
+    padding: 5rem 0px;
+    border-top: 1px solid rgb(85, 85, 85);
+}
+
+.footer__lower .text {
+    color: rgb(153, 153, 153);
+    line-height: 1.6;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+/* .bx {
+    font-family: boxicons !important;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} */
+
+@media (max-width: 56.25em){
+    html{
+        font-size: 58%;
+    }
+
+    .header_search-input{
+        width: 30rem;
+    }
+
+    .main-content__upper{
+        display: none;
+    }
+
+    .items{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer__upper {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+}
+
+@media (max-width: 37.5em){
+    html{
+        font-size: 56%;
+    }
+
+    .header_search-input{
+        display: none;
+    }
+
+    .main-content{
+        padding: 16rem 0 10rem;
+    }
+
+    .items{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
